@@ -9,5 +9,3 @@ CREATE TABLE `turnos` (
   FOREIGN KEY (`fecha_id`) REFERENCES `fecha` (`id_fecha`);
 
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- Insert
