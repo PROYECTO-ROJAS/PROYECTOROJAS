@@ -1,42 +1,21 @@
--- phpMyAdmin SQL Dump
--- version 5.1.1
--- https://www.phpmyadmin.net/
---
--- Servidor: 127.0.0.1
--- Tiempo de generación: 23-06-2022 a las 06:26:44
--- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Base de datos: `base_rojas`
---
 CREATE DATABASE IF NOT EXISTS `base_rojas` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `base_rojas`;
 
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `doctores`
---
 
 DROP TABLE IF EXISTS `doctores`;
 CREATE TABLE `doctores` (
   `legajo` int(255) NOT NULL,
-  `nombre` varchar(255) DEFAULT NULL,
-  `apellido` varchar(255) DEFAULT NULL,
+  `nombre` varchar(255) NOT NULL,
+  `apellido` varchar(255) NOT NULL,
   `tel` int(12) NOT NULL,
-  `dni` int(10) DEFAULT NULL,
-  `especialidad` varchar(255) DEFAULT NULL,
+  `dni` int(10) NOT NULL,
+  `especialidad` varchar(255) NOT NULL,
   `correo` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -58,7 +37,7 @@ INSERT INTO `doctores` (`legajo`, `nombre`, `apellido`, `tel`, `dni`, `especiali
 DROP TABLE IF EXISTS `fecha`;
 CREATE TABLE `fecha` (
   `id_fecha` int(11) NOT NULL,
-  `fecha` date DEFAULT NULL
+  `fecha` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -70,11 +49,11 @@ CREATE TABLE `fecha` (
 DROP TABLE IF EXISTS `pacientes`;
 CREATE TABLE `pacientes` (
   `id` int(255) NOT NULL,
-  `nombre` varchar(255) DEFAULT NULL,
-  `apellido` varchar(255) DEFAULT NULL,
-  `dni` int(10) DEFAULT NULL,
-  `tel` int(10) DEFAULT NULL,
-  `mail` varchar(255) DEFAULT NULL
+  `nombre` varchar(255) NOT NULL,
+  `apellido` varchar(255) NOT NULL,
+  `dni` int(10) NOT NULL,
+  `tel` int(10) NOT NULL,
+  `mail` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -98,9 +77,9 @@ INSERT INTO `pacientes` (`id`, `nombre`, `apellido`, `dni`, `tel`, `mail`) VALUE
 DROP TABLE IF EXISTS `turnos`;
 CREATE TABLE `turnos` (
   `id_turno` int(11) NOT NULL,
-  `id_client` int(255) DEFAULT NULL,
-  `leg_doc` int(255) DEFAULT NULL,
-  `fecha_id` int(255) DEFAULT NULL
+  `id_client` int(255) NOT NULL,
+  `leg_doc` int(255) NOT NULL,
+  `fecha_id` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
