@@ -107,7 +107,7 @@
               
              <form class="botonResponsive">
                <div class="col">
-                <button type="button" class="btn btn-success btn-sm" style="border-radius:50px;" data-bs-toggle="modal" data-bs-target="#AgregarPersona">
+                <button type="button" class="btn btn-success" style="border-radius:50px;" data-bs-toggle="modal" data-bs-target="#AgregarPersona">
                   Agregar Paciente <i class="bi bi-person-plus-fill"></i>
                 </button>
               </div>
@@ -120,7 +120,7 @@
         </div>
       <div class="col-2 ">
          <span class="iconosTool" data-tooltip="Buscar" >
-         <button class="btn btn-outline-primary" style="border-radius: 50px;" type="submit" name="search"><i class="bi bi-search"></i></button> 
+         <button class="btn btn-outline-primary" style="border-radius: 50px; margin-left:3px;" type="submit" name="search"><i class="bi bi-search"></i></button> 
          </span>
 
          <span  class="iconosTool" data-tooltip="Borrar Busqueda">

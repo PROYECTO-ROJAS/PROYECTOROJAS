@@ -102,35 +102,38 @@
       </ul>
       
     </nav>
-    <!--BODY-->
-    <!-- Form Agregar Dentista -->
-    <div style="margin-left:50px">
-    <div style="margin-top:9rem;" >
-    <form class="d-flex">
-              <div class="col-3">
-              <button type="button" class="btn btn-primary" style="border-radius:50px;" data-bs-toggle="modal" data-bs-target="#AgregarPersona">
-                 Agregar Dentista <i class="bi bi-person-plus-fill"></i>
-               </button>
-    </div>
-    </form>
-
-       <!-- Form Filtro -->
-       <div class="col-md-12">
-       <form action="dentistas.php" method="POST">
-       <div class="col-9 d-flex">
-         <input class="form-control me-2"  style="border-radius: 50px;" type="text" name="valueToSearch" placeholder="Buscar"><br><br>
-
-         <span class="iconosTool" data-tooltip="Buscar">
-         <button class="btn btn-outline-primary" style="border-radius: 50px;" type="submit" name="search"><i class="bi bi-search"></i></button> <br><br>
+    <div id="content">
+      <div class="container">
+        <div class="row">
+              <div class="col-md-12 d-flex p-3">
+              
+             <form class="botonResponsive">
+               <div class="col">
+                <button type="button" class="btn btn-primary " style="border-radius:50px;" data-bs-toggle="modal" data-bs-target="#AgregarPersona">
+                  Agregar Dentista <i class="bi bi-person-plus-fill"></i>
+                </button>
+              </div>
+              </form>
+             
+        <!-- Inicio Buscar-->
+       <form action="Dentistas.php" method="POST" style="width:100%" class="d-flex">
+        <div class="col">
+        <input class="form-control me-2 buscador"  style="border-radius: 50px;" type="text" name="valueToSearch" placeholder="Buscar">
+        </div>
+      <div class="col-2 ">
+         <span class="iconosTool" data-tooltip="Buscar" >
+         <button class="btn btn-outline-primary" style="border-radius: 50px; margin-left:3px;" type="submit" name="search"><i class="bi bi-search"></i></button> 
          </span>
 
          <span  class="iconosTool" data-tooltip="Borrar Busqueda">
          <a class="btn btn-outline-success" style="border-radius: 50px; margin:auto 0;"  href="dentistas.php"><i class="bi bi-x-lg"></i></a>
          </span>
+    </div>
        </div>
-       <!-- Tabla doctores --> 
-       <div style="height: 41.9rem; overflow-y: auto;" >
-       <div class="col-md-12" style="margin-top:10px;">
+<br>
+             <div style="height: 41.9rem; overflow-y: auto;" > 
+              
+              <div class="col-md-12" style="margin-top:10px;">
             <table class="table  table-bordered border-primary">
                               <thead class="tablacolor">
                                 <tr style="color: rgb(240, 240, 240);">
