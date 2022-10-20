@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/vnd.microsoft.icon" href="Archivos Varios/Img/log.ico" sizes="16x16 32x32">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Administracion | Inicio </title>
+    <title>Administración | Inicio </title>
 
     <link href="admin.css" rel="stylesheet" type="text/css">
 

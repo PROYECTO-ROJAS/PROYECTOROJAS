@@ -1,30 +1,32 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
     <head>
         <meta charset="UTF-8">
         <link rel="icon" type="image/vnd.microsoft.icon" href="../../Img/log.ico" sizes="16x16 32x32">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>DENTAL ROJAS | Admin Login</title>
+
         <!-- CSS -->
-        <link rel="stylesheet" href="../../Css/estilos.css">
-        <link rel="stylesheet" href="../../Css/loginAdmin.css">
-        <link rel="stylesheet" href="../../Css/botones.css">
-        <link rel="stylesheet" href="../../Css/CardPro.css">
-        <link rel="stylesheet" href="../../Css/hamburguesa.css">
-        <link rel="stylesheet" href="../../Css/navbarScroll.css">
-        <link rel="stylesheet" href="../../Bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../AdminPag/Archivos Varios/Css/estilos.css">
+        <link rel="stylesheet" href="../AdminPag/Archivos Varios/Css/loginAdmin.css">
+        <link rel="stylesheet" href="../AdminPag/Archivos Varios/Css/botones.css">
+        <link rel="stylesheet" href="../AdminPag/Archivos Varios/Css/CardPro.css">
+        <link rel="stylesheet" href="../AdminPag/Archivos Varios/Css/hamburguesa.css">
+        <link rel="stylesheet" href="../AdminPag/Archivos Varios/Css/navbarScroll.css">
+        <link rel="stylesheet" href="../AdminPag/Archivos Varios/Bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-
-        <link rel="stylesheet" href="../../Css/whats.css">
-        <link rel="stylesheet" href="../../Css/whats2.css">
+        <link rel="stylesheet" href="../AdminPag/Archivos Varios/Css/whats.css">
+        <link rel="stylesheet" href="../AdminPag/Archivos Varios/Css/whats2.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
         <!----------------------------------------------------->
     </head>
 
-    <body style="background-image: url(../../Img/fondo5.jpg)"> <!--Navbar-->
+    <body style="background-image: url(../AdminPag/Archivos Varios/Img/fondo5.jpg)"> <!--Navbar-->
+    
     <!--LOGIN-->
 
         <div class="container ">
@@ -59,26 +61,19 @@
             </div>
         </div>
 
-<!--FIN DE LOGIN-->
+    <!--FIN DE LOGIN-->
 
-      
-      
   </body>
-  
-    <!--------->
-    </body>
 
-        <!-- JS -->
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
-        <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 
-        <script  src="../../Js/script2.js"></script>
-        <!--<script src="Js/navbar.js"></script>-->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-        <script src="../../Bootstrap/js/bootstrap.min.js"></script>
-        <!----------------------------------------------------->
+    <script  src="../AdminPag/Archivos Varios/Js/script2.js"></script>
+    <!--<script src="Js/navbar.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="../AdminPag/Archivos Varios/Bootstrap/js/bootstrap.min.js"></script>
+
 </html>
-<!--FIN DE HTML-------------------------------------------------------------->
-

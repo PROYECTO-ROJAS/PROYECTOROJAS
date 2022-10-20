@@ -1,12 +1,12 @@
 <?php
-    include("VistasAdmin/php_code/conexion.php")
 
-    $email = $conexion->real_escape_string($_POST['email']);
+    $email = $_POST['email'];
 
-    $pwd = $conexion->real_escape_string($_POST['pwd']);
+    $pwd = $_POST['pwd'];
 
 
-    if(isset($email)&&isset($pwd)){
+    if(isset($email)&&isset($pwd)){        
+    include("../AdminPag/VistasAdmin/php_code/conexion.php");
         
         $consulta_session = "SELECT * FROM admin WHERE email = '".$email."' and pwd= '".$pwd."'";
 
