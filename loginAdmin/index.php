@@ -4,7 +4,7 @@
 
     <head>
         <meta charset="UTF-8">
-        <link rel="icon" type="image/vnd.microsoft.icon" href="../../Img/log.ico" sizes="16x16 32x32">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="../AdminPag/Archivos Varios/Img/log.ico" sizes="16x16 32x32">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>DENTAL ROJAS | Admin Login</title>
 
