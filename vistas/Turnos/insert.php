@@ -1,5 +1,4 @@
 <?php
 
-$name= $_POST['name']
-
+include("../../PHP/conexion.php");
 ?>

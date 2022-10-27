@@ -1,4 +1,18 @@
 <?php
-    $conexion = new mysqli("sql310.epizy.com","epiz_32458715","5t3lnJutj8qMqoZ","epiz_32458715_base_rojas")
+    $nombreServidor ="localhost";
+    $db = "base_rojas";
+    $usuario = "root";
+    $contraseña = "";
 
+    try {
+        $conexion = new PDO("mysql:host=$nombreServidor;dbname=$db", $usuario,$contraseña);
+        $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        echo "conexion exitosa";
+        return $conexion;
+
+    }catch (PDOException $e ){
+        echo "Error en la conexion: " .$e->getMessage();
+        echo "Linea: ".$e->getLine();
+    }
 ?>
