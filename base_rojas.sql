@@ -6,59 +6,43 @@ SET time_zone = "+00:00";
 CREATE DATABASE IF NOT EXISTS `base_rojas` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `base_rojas`;
 
--- Estructura de tabla para la tabla `doctores`
+/* Tabla Doctores*/
 
-DROP TABLE IF EXISTS `doctores`;
 CREATE TABLE `doctores` (
-  `legajo` int(255) NOT NULL,
+  `legajo` int(255) AUTO_INCREMENT,
   `nombre` varchar(255) NOT NULL,
   `apellido` varchar(255) NOT NULL,
   `tel` int(12) NOT NULL,
   `dni` int(10) NOT NULL,
   `especialidad` varchar(255) NOT NULL,
-  `correo` varchar(255) NOT NULL
+  `correo` varchar(255) NOT NULL,
+  PRIMARY KEY(`legajo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `doctores`
---
 
 INSERT INTO `doctores` (`legajo`, `nombre`, `apellido`, `tel`, `dni`, `especialidad`, `correo`) VALUES
 (1, 'Juan Carlos', 'Villanueva', 1254151525, 45068768, 'Prótesis', 'Ninohusband@gmail.com'),
 (2, 'Manuel ', 'Scala', 1557181700, 401932950, 'Protesis', 'PP@gmail.com'),
 (3, 'Franco', 'Ghireti', 1557181700, 45068768, 'Dentista', 'fran.ghireti@dentista.dientes.muelas.colm');
 
--- --------------------------------------------------------
+/* Tabla Fecha*/
 
---
--- Estructura de tabla para la tabla `fecha`
---
-
-DROP TABLE IF EXISTS `fecha`;
 CREATE TABLE `fecha` (
-  `id_fecha` int(11) NOT NULL,
-  `fecha` date NOT NULL
+  `id_fecha` int(11) AUTO_INCREMENT,
+  `fecha` date NOT NULL,
+  PRIMARY KEY (`id_fecha`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
+/* Tabla Pacientes*/
 
---
--- Estructura de tabla para la tabla `pacientes`
---
-
-DROP TABLE IF EXISTS `pacientes`;
 CREATE TABLE `pacientes` (
-  `id` int(255) NOT NULL,
+  `id` int(255) AUTO_INCREMENT,
   `nombre` varchar(255) NOT NULL,
   `apellido` varchar(255) NOT NULL,
   `dni` int(10) NOT NULL,
   `tel` int(10) NOT NULL,
-  `mail` varchar(255) NOT NULL
+  `mail` varchar(255) NOT NULL,
+  PRIMARY KEY(`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `pacientes`
---
 
 INSERT INTO `pacientes` (`id`, `nombre`, `apellido`, `dni`, `tel`, `mail`) VALUES
 (1, 'Nino', 'Nakano ', 45068769, 1557181700, 'SukkiFukun@gmail.com'),
@@ -68,92 +52,34 @@ INSERT INTO `pacientes` (`id`, `nombre`, `apellido`, `dni`, `tel`, `mail`) VALUE
 (5, 'DANILO EMANUEL ', 'SOLER SALAZAR', 1526617111, 0, '6439042'),
 (6, 'DANILO EMANUEL ', 'SOLER SALAZAR', 1526611711, 1557181700, 'danilo.soleret34@gmail.com');
 
--- --------------------------------------------------------
+/* Tabla Turnos*/
 
---
--- Estructura de tabla para la tabla `turnos`
---
-
-DROP TABLE IF EXISTS `turnos`;
 CREATE TABLE `turnos` (
-  `id_turno` int(11) NOT NULL,
+  `id_turno` int(11) AUTO_INCREMENT,
   `id_client` int(255) NOT NULL,
   `leg_doc` int(255) NOT NULL,
-  `fecha_id` int(255) NOT NULL
+  `fecha_id` int(255) NOT NULL,
+  PRIMARY KEY(`id_turno`),
+  FOREIGN KEY(`id_client`) REFERENCES `pacientes`(`id`),
+  FOREIGN KEY(`leg_doc`) REFERENCES `doctores`(`legajo`),
+  FOREIGN KEY(`fecha_id`) REFERENCES `fecha`(`id_fecha`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Índices para tablas volcadas
---
+/* Tabla Turnos*/
 
---
--- Indices de la tabla `doctores`
---
-ALTER TABLE `doctores`
-  ADD PRIMARY KEY (`legajo`);
+CREATE TABLE `admin` (
+    `id` int(11) auto_increment,
+    `nombre` varchar(200) NOT NULL,
+    `apellido` varchar(200) NOT NULL,
+    `pwd` varchar(200) NOT NULL,
+    `dni` int(200) NOT NULL,
+    `telefono` int(200) NOT NULL,
+    `email` varchar(200) NOT NULL,
+    PRIMARY KEY (`id`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Indices de la tabla `fecha`
---
-ALTER TABLE `fecha`
-  ADD PRIMARY KEY (`id_fecha`);
+INSERT INTO `admin` (`id`, `nombre`, `apellido`, `pwd`, `dni`, `telefono`, `email`) VALUES
+(1, 'Coco', 'Gato', '123', 44892988, 22494910, 'coco@gmail.com');
 
---
--- Indices de la tabla `pacientes`
---
-ALTER TABLE `pacientes`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `turnos`
---
-ALTER TABLE `turnos`
-  ADD PRIMARY KEY (`id_turno`),
-  ADD KEY `id_client` (`id_client`,`leg_doc`,`fecha_id`),
-  ADD KEY `leg_doc` (`leg_doc`),
-  ADD KEY `fecha_id` (`fecha_id`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `doctores`
---
-ALTER TABLE `doctores`
-  MODIFY `legajo` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT de la tabla `fecha`
---
-ALTER TABLE `fecha`
-  MODIFY `id_fecha` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `pacientes`
---
-ALTER TABLE `pacientes`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT de la tabla `turnos`
---
-ALTER TABLE `turnos`
-  MODIFY `id_turno` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `turnos`
---
-ALTER TABLE `turnos`
-  ADD CONSTRAINT `turnos_ibfk_1` FOREIGN KEY (`id_client`) REFERENCES `pacientes` (`id`),
-  ADD CONSTRAINT `turnos_ibfk_2` FOREIGN KEY (`leg_doc`) REFERENCES `doctores` (`legajo`),
-  ADD CONSTRAINT `turnos_ibfk_3` FOREIGN KEY (`fecha_id`) REFERENCES `fecha` (`id_fecha`);
 COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
