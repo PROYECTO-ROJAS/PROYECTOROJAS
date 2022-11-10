@@ -30,7 +30,7 @@
 
         <div class="container ">
             <div class="row offset-md-3" >
-                <form action="iniciarSesion.php" method="POST"  >
+                <form action=<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?> method="POST"  >
                     <div class="col-md-7" style="margin-left: -2px">
                         <div class="container cuadroAdmin sombraA4" align="center">  
                             <div class="content text-center" > 
@@ -49,7 +49,13 @@
                                 </div>
                                 </div>
                             </div>
+
                             </div>
+                            <?php if(!empty($error)):?>
+                            <div>
+                            <?php echo $error; ?>
+                            </div>
+                            <?php endif; ?>
                             <br>
                                 <button type="submit" class="btn btn-outline-primary sombraB " style="border-radius: 50px;background-color: #00b7ff; color:white; width: 150px; ">INGRESAR <i class="bi bi-box-arrow-in-right"></i></i></button>
                             <p></p>
@@ -74,3 +80,6 @@
     <!--<script src="Js/navbar.js"></script>-->
 
 </html>
+<?php  
+require 'login.php';
+?>

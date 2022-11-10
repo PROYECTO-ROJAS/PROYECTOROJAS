@@ -16,7 +16,7 @@
 
             session_start();
             $_SESSION["email"]= $email;
-            echo ":)";
+            header('location: adminVER.php');
             
 
         }else{

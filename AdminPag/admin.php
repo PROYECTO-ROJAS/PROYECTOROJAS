@@ -1,3 +1,10 @@
+<?php session_start();
+
+  if (isset($_SESSION['email'])){
+
+  
+  ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -314,3 +321,9 @@
     <script src="Archivos Varios/Bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
+<?php 
+  }
+  else{
+    header('location: loginAdmin/index.php');
+  }
+?>
