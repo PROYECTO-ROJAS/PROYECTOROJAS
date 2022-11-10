@@ -3,8 +3,10 @@ CREATE FUNCTION `agregarTurno` (
     id_doctor int,
     fecha_turno datetime
 )
-RETURNS INTEGER
+RETURNS text
 BEGIN
+DECLARE mensaje text;
+
 	insert into turnos(
 		id_client,
 		leg_doc,
@@ -14,5 +16,6 @@ BEGIN
 		id_doctor,
 		fecha_turno
 	);
-RETURN 1;
+SET mensaje = "Ingresado con exito!"
+RETURN mensaje;
 END
