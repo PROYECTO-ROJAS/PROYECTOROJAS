@@ -12,7 +12,6 @@
         $usuario = $_POST['usuario'];
         $clave = $_POST['clave'];
         $clave2 = $_POST['clave2'];
-        
         $clave = hash('sha512', $clave);
         $clave2 = hash('sha512', $clave2);
         

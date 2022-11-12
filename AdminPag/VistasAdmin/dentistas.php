@@ -1,3 +1,9 @@
+<?php session_start();
+
+  if (isset($_SESSION['email'])){
+ 
+  
+  ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -16,6 +22,14 @@
      <link rel="stylesheet" href="../Tooltips.css">
      <?php
       include('php_code/conexion.php');
+       
+      // function to connect and execute the query
+      function filterTable($query)
+      {
+          $connect = mysqli_connect("localhost", "root", "", "base_rojas");
+          $filter_Result = mysqli_query($connect, $query);
+          return $filter_Result;
+      }
       if(isset($_POST['search']))
       {
           $valueToSearch = $_POST['valueToSearch'];
@@ -29,14 +43,7 @@
           $query = "SELECT * FROM `doctores`";
           $search_result = filterTable($query);
       }
-       
-      // function to connect and execute the query
-      function filterTable($query)
-      {
-          $connect = mysqli_connect("localhost", "root", "", "base_rojas");
-          $filter_Result = mysqli_query($connect, $query);
-          return $filter_Result;
-      }
+      
        
     ?>
 
@@ -96,8 +103,8 @@
         <li>
           <a href="ajustes.php">Ajustes</a>
         </li>
-        <li class="salir">
-          <a href="">Salir</a>
+        <li class="salir">  
+          <a href="../Archivos Varios/Inc/cerrarSession.php">Salir</a>
         </li>
       </ul>
       
@@ -391,3 +398,6 @@
   </div>
 </div>
 <!--FIN DE VER PERSONA-->
+<?php 
+  }
+?>
