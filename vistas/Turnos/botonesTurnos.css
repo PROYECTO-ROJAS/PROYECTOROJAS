@@ -1,0 +1,19 @@
+.cardTurno{
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+}
+.cardTurno p{
+   width:50;
+}
+.EmergCard{
+    background-color:red;
+}
+.TurnCard{
+    background-color:green;
+}
+.EmailCard{
+    background-color:blue;
+}
