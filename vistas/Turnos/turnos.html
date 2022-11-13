@@ -27,7 +27,10 @@
     <!----------------------------------------------------->
 </head>
 
-<body>
+<body style="    background-image: url('../../Img/fondo5.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;">
     <!--Navbar-->
 
     <nav class="navbar fixed-top navbar-expand-lg navbar-light rara sombraB" id="EpicNavbar">
@@ -105,42 +108,144 @@
 
     <!--FIN DE BOTON WSP-->
 
-    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" id="Titulo">
-        <!-- Banner Image  -->
 
-        <div class="row">
-            <div class="col-md-4 cardTurno EmergCard">
-                <button class="botonTurnos">
-                    Emergencias
-                </button>
+    <!-- Banner Image  -->
+
+    <div class="fondoTurnos">
+        <div class="cardTurno">
+
+            <div class="nav divBotones" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <button class="botonTurnos " id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="false" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000"><i class="bi bi-envelope-open" ></i> Email </button>
+                <button class="botonTurnos active" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="true" data-aos="fade-right" data-aos-delay="700" data-aos-duration="1000"><i class="bi bi-whatsapp" ></i> WhatsApp</button>
+                <button class="botonTurnos" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false" data-aos="fade-right" data-aos-delay="900" data-aos-duration="1000"><i class="bi bi-telephone-outbound" ></i> Emergencias</button>
             </div>
-            <div class="col-md-4 cardTurno TurnCard">
-                <button class="botonTurnos">
-                    Turnos
-                </button>
+            <div class="tab-content divContenido" id="v-pills-tabContent" data-aos="fade-up" data-aos-duration="1000">
+                <!--CORREO-->
+                <div class="tab-pane fade  text-center" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+
+                    <h3 style="text-shadow: 0px 0px 20px rgb(22, 7, 150);">Turnos por Email</h3>
+                    <div class="container">
+                        <div class="row d-flex justify-content-center align-content-center">
+                            <div class="col-md-8 ">
+
+
+
+                                <form class="row g-3 formulario">
+
+                                    <div class="col-4">
+                                        <label for="validationDefault01" class="form-label">Nombre/s</label>
+                                        <input type="text" class="form-control" id="validationDefault01" placeholder="Nombre" required>
+                                    </div>
+                                    <div class="col-4">
+                                        <label for="validationDefault02" class="form-label">Apellido/s</label>
+                                        <input type="text" class="form-control" id="validationDefault02" placeholder="Apellido" required>
+                                    </div>
+                                    <div class="col-3">
+                                        <label for="validationDefaultUsername" class="form-label">DNI</label>
+                                        <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" placeholder="DNI" required>
+                                    </div>
+
+                                    <div class="col-5">
+                                        <label for="validationDefaultUsername" class="form-label">Telefono</label>
+                                        <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" placeholder="+54 9 11 6587-9270" required>
+                                    </div>
+                                    <div class="col-5">
+                                        <label for="validationDefaultUsername" class="form-label">Correo</label>
+                                        <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" placeholder="dentalrojasrojas@gmail.com" required>
+                                    </div>
+
+                                    <div class="col-4">
+                                        <label for="validationDefaultUsername" class="form-label">Asunto</label>
+                                        <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" placeholder="Consulta de Tratamiento" required>
+                                    </div>
+
+
+                                    <div class="col-md-12">
+                                        <label for="validationDefaultUsername" class="form-label">Mensaje</label>
+
+                                        <textarea class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" placeholder="Mensaje..." id="floatingTextarea2" style="height: 100px" placeholder="Mensaje"></textarea>
+
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="botonTurnoAnimado" type="submit">Enviar <i class="bi bi-envelope"></i><i class="bi bi-arrow-right"></i></button>
+                                    </div>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--FIN DE CORREO-->
+                <!--WHATS-->
+                <div class="tab-pane fade show active text-center" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    <div class="container">
+                        <div class="row">
+                            <!--IZQUIERDA-->
+                            <div class="col-md-6 " style="margin: auto;">
+                                <h2>Pedi tu turno!</h2>
+                                <p style="font-size: 1.3rem;">En Dental Rojas atendemos desde urgencias en el día hasta lo último en procedimientos dentales quirúrgicos y estéticos.
+                                </p>
+                                <p style="font-size: 1.2rem;">Escanea el codigo QR para hablar con nosotros ¡Te esperamos!</p>
+
+                                <div class="d-flex justify-content-center">
+                                    <a class="botonTurnoAnimado" href="https://api.whatsapp.com/send?phone=5491165879270" target="_blank" role="button"> <i class="bi bi-whatsapp"></i> Abrir WhatsApp</a>
+                                </div>
+                                <p style="font-size: 1.2rem; margin-top: -25px;">
+                                    </i> +54 9 11 6587-9270 </p>
+                            </div>
+                            <!--FIN DE IZQUIERDA-->
+                            <!--DERECHA-->
+                            <div class="col-md-6 " style="margin: auto;">
+                                <img src="../../Img/QR.jpg" alt="QR ROJAS DENTRAL ROJAS DENTISTA" class="QRimg">
+                            </div>
+                            <!--FIN DERECHA-->
+                        </div>
+
+                    </div>
+                </div>
+                <!--FIN DE WHATS-->
+                <!--EMERGENCIAS-->
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                    <div class="container">
+                        <div class="row">
+                            <!--IZQUIERDA-->
+                            <div class="col-md-6 ">
+                                <h2>Atiendete con nosotros!</h2>
+                                <p style="font-size: 1.3rem;">Si tenes una urgencia te atendemos en el acto.
+                                </p>
+                                <p style="font-size: 1.2rem;">Abierto de Lunes a Viernes de 10 a 20hs y Sabados de 16 a 19hs</p>
+
+                                <div class="datosEmerg">
+                                    <p><i class="bi bi-telephone-outbound"></i> 4901-5451</p>
+                                    <p><i class="bi bi-whatsapp"></i> +54 9 11 6587-9270 </p>
+                                    <p><i class="bi bi-building"></i> Rojas 68, CABA</p>
+                                </div>
+
+                                <a class="botonTurnoAnimado text-center" href="https://api.whatsapp.com/send?phone=5491165879270" target="_blank" role="button"> <i class="bi bi-whatsapp"></i> Abrir WhatsApp</a>
+
+                            </div>
+                            <!--FIN DE IZQUIERDA-->
+                            <!--DERECHA-->
+                            <div class="col-md-6 " style="margin: auto;">
+                                <iframe class="mapaTurnos" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.38934045774!2d-58.44449062417734!3d-34.61960015833743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3f3464220d%3A0x52cd0a4e55e75b76!2sDental%20Rojas!5e0!3m2!1ses!2sar!4v1668282122277!5m2!1ses!2sar"
+                                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                            <!--FIN DERECHA-->
+                        </div>
+
+                    </div>
+
+                </div>
+                <!--FIN EMERGENCIAS-->
             </div>
-            <div class="col-md-4 cardTurno EmailCard">
-                <button class="botonTurnos">
-                    Email
-                </button>
-            </div>
-            <div class="col tresBotones">
-                <button class="botonTurnos">
-                    1
-                </button>
-                <button class="botonTurnos">
-                    2
-                </button>
-                <button class="botonTurnos">
-                    3
-                </button>
-            </div>
+
         </div>
     </div>
 
-    <!--FOOTER-->
+
     <!-- Footer -->
-    <footer class="text-center text-lg-start text-white">
+    <footer class="text-center text-lg-start text-white corteFooter">
         <!-- Grid container -->
         <div class="container p-4 pb-0">
             <!-- Section -->
