@@ -1,0 +1,12 @@
+Esta carpeta es la encarga de verificar que se va a quere hacer y que 
+los datos que se manden sean correctos
+
+Por ejemplo, si se llega al apartado "Dentistas"
+
+Dentro de controlador se va a ver si lo que se quiere hacer en dentistsa es
+-Ingresar
+-Borrar
+-Editar
+
+en la seleccion de ingresar por ejemplo, se pasa a la siguiente carpeta:
+MODELO

@@ -398,6 +398,9 @@
   </div>
 </div>
 <!--FIN DE VER PERSONA-->
-<?php 
+<?php
+  }
+  else{
+    header('location: ../../index.php');
   }
 ?>

@@ -1,3 +1,8 @@
+<?php session_start();
+ 
+  if (isset($_SESSION['email'])){
+?>
+
 <html >
   <head>
 
@@ -373,3 +378,10 @@
     </div>
   </div>
   <!--FIN DE AGREGAR PERSONA-->
+
+  <?php
+  }
+  else{
+    header('location: ../../index.php');
+  }
+?>

@@ -1,9 +1,7 @@
 <?php session_start();
 
   if (isset($_SESSION['email'])){
- 
-  
-  ?>
+?>
 <?php 
   require 'Archivos Varios\Inc\header.php';
 ?>
@@ -246,9 +244,10 @@
     <script src="Archivos Varios/Bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
+
 <?php 
   }
   else{
-    header('location: ../../loginAdmin/index.php');
+    header('location: ../index.php');
   }
 ?>

@@ -1,0 +1,11 @@
+Dentro de esta carpeta se van a encontrar los distintos objetos:
+
+Paciente
+Doctor
+Turno
+
+Cada objeto va a tener sus funciones especificas, por ejemplo,
+un objeto paciente puede ingresarDatos, borrarDatos o editarDatos
+
+Aca las funciones de cada objeto tienen que estar hechas para ser
+llamdas en el controlador
