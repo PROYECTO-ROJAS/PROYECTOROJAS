@@ -1,4 +1,4 @@
-create function verificarVacio(
+create function `verificarVacio`(
     _valor text,
     _titulo text
 )

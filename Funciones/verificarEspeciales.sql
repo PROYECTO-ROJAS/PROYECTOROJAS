@@ -1,14 +1,12 @@
-create function verificarEspeciales(
-    _valor text,
+CREATE DEFINER=`root`@`localhost` FUNCTION `verificarEspeciales`(_valor text,
     _titulo text
 
-) returns text
-
+) RETURNS text CHARSET latin1
 begin
     declare mensaje text default 'Sin accion';
 
     if ( locate ("'",_valor) or locate ('!',_valor) or locate ('?',_valor) or locate ('/',_valor) 
-      or locate ('"',_valor) or locate ('¡',_valor) or locate ('¿',_valor) or locate ('\',_valor) 
+      or locate ('"',_valor) or locate ('¡',_valor) or locate ('¿',_valor) 
       or locate ('´',_valor) or locate ('(',_valor) or locate ('<',_valor) or locate ('=',_valor)
       or locate ('`',_valor) or locate (')',_valor) or locate ('>',_valor) or locate ('$',_valor)
       or locate ('[',_valor) or locate (']',_valor) or locate ('{',_valor) or locate ('}',_valor)
@@ -21,4 +19,4 @@ begin
     
     return mensaje;
 
-end;
+end

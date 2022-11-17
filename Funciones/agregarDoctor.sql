@@ -9,7 +9,7 @@ create function `agregarDoctor` (
 
 begin
 
-declare mensaje text dafault 'Sin accion';
+declare mensaje text default 'Sin accion';
 
 -- Validacion --
 
@@ -24,14 +24,12 @@ IF (mensaje = "ok") THEN
 END IF;
 
 IF (mensaje="ok") THEN
-    SET mensaje = (SELECT verificarEspeciales(apellido_doctor,"Apellido"))
+    SET mensaje = (SELECT verificarEspeciales(apellido_doctor,"Apellido"));
 END IF;
 
 IF (mensaje="ok") THEN
- SET mensajea = (SELECT verificarVacio(correo_doctor,"Correo"))
+ SET mensaje = (SELECT verificarVacio(correo_doctor,"Correo"));
 END IF;
-
--- Falta un Verificar Correo que vea que existe un @ y el correo este bien armado
 
 -- Insertar Doctor --
 

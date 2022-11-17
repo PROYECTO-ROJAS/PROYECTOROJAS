@@ -16,6 +16,6 @@ DECLARE mensaje text;
 		id_doctor,
 		fecha_turno
 	);
-SET mensaje = "Ingresado con exito!"
+SET mensaje = "Ingresado con exito!";
 RETURN mensaje;
 END
