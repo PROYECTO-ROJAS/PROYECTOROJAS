@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="Archivos Varios/Bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <?php
-     include("VistasAdmin/php_code/conexion.php")
+     include("php_code/conexion.php")
     ?>
     <!-- Bootstrap CSS -->
   </head>
@@ -60,16 +60,16 @@
           <a href="admin.php">Inicio</a>
         </li>
         <li>
-          <a href="">Calendario</a>
+          <a href="calendario.php">Calendario</a>
         </li>
         <li>
-          <a href="VistasAdmin/pacientes.php">Pacientes</a>
+          <a href="pacientes.php">Pacientes</a>
         </li>
         <li>
-          <a href="VistasAdmin/dentistas.php">Dentistas</a>
+          <a href="dentistas.php">Dentistas</a>
         </li>
         <li>
-          <a href="VistasAdmin/ajustes.php">Ajustes</a>
+          <a href="ajustes.php">Ajustes</a>
         </li>
         <li class="salir">
           <a href="Archivos Varios\Inc\cerrarSession.php">Salir</a>

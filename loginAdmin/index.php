@@ -36,7 +36,9 @@
             $_SESSION['email'] = $usuario;
             $_SESSION['nombre'] = $resultado['nombre'] ;
             $_SESSION['apellido'] = $resultado['apellido'];
-            header('location: ../AdminPag/admin.php');
+            $_SESSION['dni'] = $resultado['dni'];
+            $_SESSION['telefono'] = $resultado['telefono'];
+            header('location: ../AdminPag/index.php');
         }else{
             $error .= '<i>Este usuario no existe</i>';
         }

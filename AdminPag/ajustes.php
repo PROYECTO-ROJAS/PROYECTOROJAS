@@ -2,86 +2,9 @@
  
   if (isset($_SESSION['email'])){
 ?>
-
-<html >
-  <head>
-
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/vnd.microsoft.icon" href="../Archivos Varios/Img/log.ico" sizes="16x16 32x32">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Administracion | Ajustes </title>
-
-    <link href="../admin.css" rel="stylesheet" type="text/css">
-
-    <link rel="stylesheet" href="../Archivos Varios/Css/estilos.css">
-    <link rel="stylesheet" href="../Archivos Varios/Css/loginAdmin.css">
-    <link rel="stylesheet" href="../Archivos Varios//Bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-     <link rel="stylesheet" href="../Tooltips.css">
-   
-     <?php
-     include("php_code/conexion.php")
-    ?>
-
-    <!-- Bootstrap CSS -->
-
-  </head>
-  <body>
-    
-  <nav class="navbar navbar-expand-lg navbar-light navColor fixed-top">
-    <button id="sidebarCollapse" class="btn navbar-btn">
-      <i class="bi bi-list" style="font-size:25px"></i>
-    </button>
-    <a class="navbar-brand" href="">
-      <img src="../Archivos Varios//Img/Logo.png" style="width: 100px;">
-    </a>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto TextNav" >
-        <li class="nav-item" style="margin-top: -10px;">
-          <!--Hora-->
-          <h5 id="mostrarHora" ></h5>
-        </li>
-          <li class="nav-item " style="margin-top: -10px;">
-            <!--Fecha-->
-              <h5 id="FechaHoy_Date"></h5> 
-          </li>
-      </ul>
-    </div>
-    
-  </nav>
-
-  <div class="wrapper fixed-left">
-    <nav id="sidebar">
-      <div class="sidebar-header">
-        <center>
-          <h3><u>Ajustes</u></h3>
-          <img src="../Archivos Varios/Img/jake.jpeg" class="FotoPerfilAdmin" style="width: 80px;">
-          <h3>Nombre</h3>
-          <h3>Apellido</h3>
-        </center>
-      </div>
-
-      <ul class="list-unstyled components" align="center">
-        <li>
-          <a href="../admin.php">Inicio</a>
-        </li>
-        <li>
-          <a href="">Calendario</a>
-        </li>
-        <li>
-          <a href="pacientes.php">Pacientes</a>
-        </li> 
-        <li>
-          <a href="dentistas.php">Dentistas</a>
-        </li>
-        <li>
-          <a href="ajustes.php">Ajustes</a>
-        </li>
-        <li class="salir">
-          <a href="">Salir</a>
-        </li>
-      </ul>
-    </nav>
+<?php 
+  require_once 'Archivos Varios\Inc\header.php';
+?>
     <!--BODY-->
     <div id="content">
       <div class="container" style="margin-top: -25px; ;">
@@ -95,10 +18,10 @@
                   </div>
                   <div class="col-md-7">
                       <br>
-                        <h2>Nombre apellido</h2>
-                        <h4>DNI: (00000001)</h4>
-                        <h4>Tel: (+54 9 1100000001)</h4>
-                        <h4>Email: Correo@ejemplo.com</h4>
+                        <h2><?php echo $_SESSION['nombre']  ," ", $_SESSION['apellido']?></h2>
+                        <h4><?php echo "DNI " ,$_SESSION['dni']?></h4>
+                        <h4><?php echo "Telefono : " ,$_SESSION['telefono']?></h4>
+                        <h4><?php echo $_SESSION['email']?></h4>
                       <br>
                       <div class="d-grid gap-2">
                         <button type="button" class="btn btn-success" style="border-radius: 50px;" data-bs-toggle="modal" data-bs-target="#EDITARPERFIL">
@@ -378,10 +301,9 @@
     </div>
   </div>
   <!--FIN DE AGREGAR PERSONA-->
-
-  <?php
+<?php 
   }
   else{
-    header('location: ../../index.php');
+    header('location: ../index.php');
   }
 ?>

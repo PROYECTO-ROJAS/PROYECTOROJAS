@@ -4,8 +4,9 @@
 ?>
 <?php 
   require_once 'Archivos Varios\Inc\header.php';
+  $sql = "SELECT COUNT(id) FROM pacientes ";
+  $result = $conexion->query($sql);
 ?>
-
     <div id="content">
 
       <div class="container">
