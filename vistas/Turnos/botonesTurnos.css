@@ -144,6 +144,7 @@
 @media (max-width: 950px) {
     .fondoTurnos {
         padding: 15vh 0 10vh 0;
+        margin-bottom: 0;
     }
     .cardTurno {
         display: grid;
@@ -154,5 +155,9 @@
     }
     .divContenido {
         border-radius: 50px;
+        margin-top: 50px;
+        height: auto;
+        padding: 20px 10px
     }
+
 }
