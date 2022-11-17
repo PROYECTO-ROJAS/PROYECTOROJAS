@@ -1,4 +1,7 @@
-<?php 
+<?php session_start();
+
+  if (isset($_SESSION['email'])){
+ 
     include("php_code/conexion.php");
 
 $legajo=$_GET['legajo'];
@@ -87,3 +90,11 @@ $row=mysqli_fetch_array($query);
     </div>
 </body>
 </html>
+
+<?php
+  }
+  else{
+    header('location: ../../index.php');
+  }
+?>
+
