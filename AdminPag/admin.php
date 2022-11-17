@@ -3,7 +3,7 @@
   if (isset($_SESSION['email'])){
 ?>
 <?php 
-  require 'Archivos Varios\Inc\header.php';
+  require_once 'Archivos Varios\Inc\header.php';
 ?>
 
     <div id="content">

@@ -26,11 +26,16 @@
             ':email' => $usuario,
             ':pwd' => $clave
         ));
+
             
         $resultado = $statement->fetch();
+
+        print_r ($resultado);
         
         if ($resultado !== false){
             $_SESSION['email'] = $usuario;
+            $_SESSION['nombre'] = $resultado['nombre'] ;
+            $_SESSION['apellido'] = $resultado['apellido'];
             header('location: ../AdminPag/admin.php');
         }else{
             $error .= '<i>Este usuario no existe</i>';

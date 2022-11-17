@@ -1,3 +1,7 @@
 <?php
-    $conexion = new mysqli ("localhost","root","","base_rojas");
+    try{
+        $conexion = new PDO('mysql:host=localhost;dbname=base_rojas', 'root', '');
+        }catch(PDOException $prueba_error){
+            echo "Error: " . $prueba_error->getMessage();
+        }
 ?>
