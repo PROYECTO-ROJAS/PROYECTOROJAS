@@ -1,3 +1,7 @@
+<?php session_start();
+
+  if (isset($_SESSION['email'])){
+?>
 <?php require_once('db-connect.php') ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -237,3 +241,9 @@ if(isset($conn)) $conn->close();
 
 
 </html>
+<?php 
+  }
+  else{
+    header('location: ../index.php');
+  }
+?>

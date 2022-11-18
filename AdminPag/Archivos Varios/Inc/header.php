@@ -60,7 +60,7 @@
           <a href="admin.php">Inicio</a>
         </li>
         <li>
-          <a href="calendario.php">Calendario</a>
+          <a href="event_calenda/index.php">Calendario</a>
         </li>
         <li>
           <a href="pacientes.php">Pacientes</a>
