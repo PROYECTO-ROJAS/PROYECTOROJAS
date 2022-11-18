@@ -6,6 +6,5 @@ CREATE TABLE `turnos` (
   PRIMARY KEY (`id_turno`),
   FOREIGN KEY (`id_client`) REFERENCES `pacientes` (`id`),
   FOREIGN KEY (`leg_doc`) REFERENCES `doctores` (`legajo`),
-  FOREIGN KEY (`fecha_id`) REFERENCES `fecha` (`id_fecha`);
-
+  FOREIGN KEY (`fecha_id`) REFERENCES `schedule_list` (`id`);
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

@@ -26,11 +26,14 @@ INSERT INTO `doctores` (`legajo`, `nombre`, `apellido`, `tel`, `dni`, `especiali
 
 /* Tabla Fecha*/
 
-CREATE TABLE `fecha` (
-  `id_fecha` int(11) AUTO_INCREMENT,
-  `fecha` date NOT NULL,
-  PRIMARY KEY (`id_fecha`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `schedule_list` (
+  `id` int(30) NOT NULL,
+  `title` text NOT NULL,
+  `description` text NOT NULL,
+  `start_datetime` datetime NOT NULL,
+  `end_datetime` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 /* Tabla Pacientes*/
 
@@ -55,14 +58,14 @@ INSERT INTO `pacientes` (`id`, `nombre`, `apellido`, `dni`, `tel`, `mail`) VALUE
 /* Tabla Turnos*/
 
 CREATE TABLE `turnos` (
-  `id_turno` int(11) AUTO_INCREMENT,
+  `id_turno` int(11) Auto_increment NOT NULL,
   `id_client` int(255) NOT NULL,
   `leg_doc` int(255) NOT NULL,
   `fecha_id` int(255) NOT NULL,
-  PRIMARY KEY(`id_turno`),
-  FOREIGN KEY(`id_client`) REFERENCES `pacientes`(`id`),
-  FOREIGN KEY(`leg_doc`) REFERENCES `doctores`(`legajo`),
-  FOREIGN KEY(`fecha_id`) REFERENCES `fecha`(`id_fecha`)
+  PRIMARY KEY (`id_turno`),
+  FOREIGN KEY (`id_client`) REFERENCES `pacientes` (`id`),
+  FOREIGN KEY (`leg_doc`) REFERENCES `doctores` (`legajo`),
+  FOREIGN KEY (`fecha_id`) REFERENCES `schedule_list` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /* Tabla Turnos*/
@@ -118,6 +121,8 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `verificarVacio` (`_valor` TEXT, `_ti
     return mensaje;
 
 END$$
+
+
 
 -- FUNCIONES
 
