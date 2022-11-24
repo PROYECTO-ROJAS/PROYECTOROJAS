@@ -27,7 +27,7 @@ INSERT INTO `doctores` (`legajo`, `nombre`, `apellido`, `tel`, `dni`, `especiali
 /* Tabla Fecha*/
 
 CREATE TABLE `schedule_list` (
-  `id` int(30) NOT NULL,
+  `id` int(255) AUTO_INCREMENT,
   `title` text NOT NULL,
   `description` text NOT NULL,
   `start_datetime` datetime NOT NULL,
