@@ -14,7 +14,7 @@
               <div class="container">
                 <div class="row">
                   <div class="col-5" align="center">
-                    <img src="../Archivos Varios//Img/jake.jpeg" class="FotoPerfilAdmin" width="300px">
+                    <img src="Archivos Varios/Img/jake.jpeg" class="FotoPerfilAdmin" width="300px">
                   </div>
                   <div class="col-md-7">
                       <br>

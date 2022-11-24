@@ -91,9 +91,7 @@
                             <td><?php echo $row['tel']?></td>
                             <td><?php echo $row['mail']?></td>
                             <td>    
-                              <span class="iconosTool" data-tooltip="Ver mas"><button type="button" style="border-radius: 50px; color: #fff;" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#VerPersona">
-                                  <i class="bi bi-person-lines-fill"></i>
-                                </button></span>
+                              
                                 <span  class="iconosTool" data-tooltip="Editar"> 
                                 <a class="btn btn-warning btn-sm " href= "editar_form_pac.php?id= <?php echo $row['id']; ?>" style="border-radius: 50px;">
                                   <i class="bi bi-pencil-fill"></i></a></span>
@@ -131,7 +129,7 @@
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
-   <script src="../Archivos Varios/Bootstrap/js/bootstrap.min.js"></script>
+   <script src="Archivos Varios/Bootstrap/js/bootstrap.min.js"></script>
   
     
   </body>
@@ -233,9 +231,49 @@
   </div>
 </div>
 <!--FIN DE EDITAR PERSONA-->
+<!-- AGREGAR PERSONA  -->
+<div class="modal fade" id="AgregarPersona" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="AgregarPersona" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-success" style="color:#fff">
+          <h5 class="modal-title" id="staticBackdropLabel">Agregar Paciente</h5>
+        </div>
+        <!--FORM AGREGAR-->
+        <form method="post" action="php_code/insert_pac.php" >
+            <div class="modal-body ">
+                  <div class="row g-3"> 
+                  <div class="col-md-4">
+                            <label for="formAdmin01" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="validationDefault01" name ="nombre"required>
+                          </div>
+                          <div class="col-md-4">
+                            <label for="formAdmin02" class="form-label">Apellido</label>
+                            <input type="text" class="form-control" id="validationDefault02" name ="apellido" required>
+                          </div>
+                          <div class="col-md-3">
+                            <label for="formAdmin03" class="form-label">DNI</label>
+                            <input type="number" class="form-control" id="validationDefault03" name ="dni" required>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="formAdmin04" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="validationDefault04" name ="mail" required>
+                          </div>
+                          <div class="col-md-3">
+                            <label for="formAdmin05" class="form-label">Teléfono</label>
+                            <input type="number" class="form-control" id="validationDefault05" name ="telefono" required>
+                          </div>
+                      </div>           
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" style="border-radius: 50px;" data-bs-dismiss="modal">Cancelar</button>
+                  <button class="btn btn-success
+                  " style="border-radius: 50px;" type="submit">Guardar</button>
+                </div>
+            <!--FIN DE FORMULARIO AGREGAR-->
+
 
 <!-- VER PERSONA  -->
-<div class="modal fade" id="VerPersona" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="AgregarPersona" aria-hidden="true">
+<div class="modal fade" id="VerPersona" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="VerPersona" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header bg-info" style="color:#fff">
@@ -262,6 +300,10 @@
                 <button type="button" class="btn btn-secondary" style="border-radius: 50px;" data-bs-dismiss="modal">Cerrar</button>
               </div>
           <!--FIN DE VER INFO-->
+    </div>
+  </div>
+</div>
+<!--FIN DE VER PERSONA-->
     </div>
   </div>
 </div>

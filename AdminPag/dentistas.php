@@ -38,7 +38,8 @@
         <div class="row">
               <div class="col-md-12 d-flex p-3">
               
-             <form class="botonResponsive">
+             
+              <form class="botonResponsive">
                <div class="col">
                 <button type="button" class="btn btn-primary " style="border-radius:50px;" data-bs-toggle="modal" data-bs-target="#AgregarPersona">
                   Agregar Dentista <i class="bi bi-person-plus-fill"></i>
@@ -95,10 +96,7 @@
                                
 
                                   <td>    
-                                    <span class="iconosTool" data-tooltip="Ver mas"><button type="button" style="border-radius: 50px; color: #fff;" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#VerPersona">
-                                        <i class="bi bi-person-lines-fill"></i>
-                                      </button></span>
-
+                                    
                                       <!-- Boton Editar Doctor -->
                                       <span  class="iconosTool" data-tooltip="Editar"> 
                                       <a class="btn btn-warning btn-sm " href= "editar_form_doc.php?legajo= <?php echo $row['legajo']; ?>" style="border-radius: 50px;">
@@ -133,7 +131,7 @@
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
-    <script src="../Archivos Varios/Bootstrap/js/bootstrap.min.js"></script>
+    <script src="Archivos Varios/Bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
 

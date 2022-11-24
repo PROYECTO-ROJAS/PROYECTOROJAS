@@ -47,7 +47,7 @@
     <nav id="sidebar">
       <div class="sidebar-header">
         <center>
-          <h3><u>Inicio</u></h3>
+          <BR>  
             <img src="Archivos Varios/Img/jake.jpeg" class="FotoPerfilAdmin" width="80px">
           <h3><?php echo $_SESSION['nombre']?></h3>
           <h3><?php echo $_SESSION['apellido']?></h3>

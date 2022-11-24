@@ -3,15 +3,29 @@
   if (isset($_SESSION['email'])){
 ?>
 <?php require_once('db-connect.php') ?>
+
+<?php
+      
+  
+      $connect = mysqli_connect("localhost", "root", "", "base_rojas");
+      $query = "SELECT * FROM `pacientes`";
+      $search_result = mysqli_query($connect, $query);
+       
+      
+    
+     
+
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/vnd.microsoft.icon" href="../../Img/log.ico" sizes="16x16 32x32">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="../../Archivos Varios/Img/log.ico" sizes="16x16 32x32">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CALENDARI</title>
+    <title>Calendario</title>
     <link href="admin.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
@@ -59,22 +73,22 @@
 
       <ul class="list-unstyled components" align="center">
         <li>
-          <a href="admin.html">Inicio</a>
+          <a href="--/admin.html">Inicio</a>
         </li>
         <li>
           <a href="">Calendario</a>
         </li>
         <li>
-          <a href="VistasAdmin/pacientes.php">Pacientes</a>
+          <a href="../pacientes.php">Pacientes</a>
         </li>
         <li>
-          <a href="VistasAdmin/dentistas.php">Dentistas</a>
+          <a href="../dentistas.php">Dentistas</a>
         </li>
         <li>
-          <a href="VistasAdmin/ajustes.php">Ajustes</a>
+          <a href="../ajustes.php">Ajustes</a>
         </li>
         <li class="salir">
-          <a href="">Salir</a>
+        <a href="../Archivos Varios\Inc\cerrarSession.php">Salir</a>
         </li>
       </ul>
       
@@ -96,41 +110,25 @@
     <!--FIN DE HEAD-->
           <tbody>
             <!--PACIENTE FILA-->
+            <?php 
+                            while($row = mysqli_fetch_array($search_result)) 
+                              {
+                            ?>
             <tr>
-              <th scope="row">1</th>
-              <td>Nombre</td>
-              <td>Apellido</td>
+              <th scope="row"><?php echo $row['id']?></th>
+              <td><?php echo $row['nombre']?></td>
+              <td><?php echo $row['apellido']?></td>
               <td>
                 <button type="button"style="border-radius: 50px;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#EliminarAdmin">
-                  Eliminar <i class="bi bi-trash-fill"></i> 
+                  Seleccionar <i class="bi bi-trash-fill"></i> 
                 </button>                              
               </td>
             </tr>
+            <?php
+                                }
+                          ?>
             <!--FIN DE PACIENTE-->
-             <!--PACIENTE FILA-->
-            <tr>
-                  <th scope="row">2</th>
-                  <td>Nombre</td>
-                  <td>Apellido</td>
-                  <td>
-                    <button type="button"style="border-radius: 50px;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#EliminarAdmin">
-                      Eliminar <i class="bi bi-trash-fill"></i> 
-                    </button>  
-              </td>
-                </tr>
-                 <!--FIN DE PACIENTE-->
-             <!--PACIENTE FILA-->
-                <tr>
-                      <th scope="row">3</th>
-                      <td>Nombre</td>
-                      <td>Apellido</td>
-                      <td>
-                        <button type="button"style="border-radius: 50px;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#EliminarAdmin">
-                          Eliminar <i class="bi bi-trash-fill"></i> 
-                        </button>  
-                  </td>
-                    </tr>
-                     <!--FIN DE PACIENTE-->
+         
           </tbody>
         </table>
 </div>
